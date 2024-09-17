@@ -1,4 +1,4 @@
-/* Estilo base */
+/* Estilo base atualizado */
 * {
     margin: 0;
     padding: 0;
@@ -52,9 +52,35 @@ nav ul li a:hover {
     height: 100vh;
     background: url('nails-bg.jpg') center center/cover no-repeat;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 20px;
+}
+
+.landing-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left-side {
+    flex: 1;
+    display: flex;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+}
+
+.mariana-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.right-side {
+    flex: 1;
+    text-align: left;
 }
 
 .landing-content h1 {
@@ -81,6 +107,37 @@ nav ul li a:hover {
     background-color: #ff80ab;
 }
 
+/* Galeria de fotos para a landing page */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilo do botão do WhatsApp */
+.whatsapp-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1EBE57;
+}
+
+/* Seções gerais */
 section {
     padding: 60px 20px;
     text-align: center;
