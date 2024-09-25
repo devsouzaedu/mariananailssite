@@ -63,6 +63,39 @@ nav ul li a:hover {
     color: #ff4081;
 }
 
+.social-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Estilo do ícone do Instagram */
+.instagram-icon {
+    width: 30px; /* Tamanho do ícone */
+    height: auto;
+    margin-left: 20px; /* Espaçamento para o ícone */
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Garante que o ícone permaneça visível em dispositivos móveis */
+@media (max-width: 768px) {
+    .instagram-icon {
+        margin-right: 20px;
+    }
+}
+
+
 /* Estilo da Landing Page */
 .landing-page {
     background-color: #ffe6f0; /* Fundo rosinha claro */
