@@ -44,25 +44,45 @@
         </div>
     </nav>
 
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curso de Nail Art - Mariana Nails</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    
     <header class="hero-video-section text-center text-white">
         <div class="container py-5">
-            <h1 class="display-4">Se torne especialista em Nail Art em 2025</h1>
+            <!-- Container do vídeo (inicialmente oculto) -->
+            <div class="ratio ratio-16x9" id="video-container" style="display: none;">
+                <video autoplay muted loop class="w-100 video-embed" id="video">
+                    <source src="galeria/unhas_nail_art_curso_completo_mariana_nails_barueri_alphaville.webm" type="video/webm">
+                    Seu navegador não suporta o formato de vídeo.
+                </video>
+            </div>
+    
+            <!-- Imagem clicável para carregar o vídeo -->
+            <div class="video-thumbnail">
+                <img src="galeria/clique_video.jpg" alt="Clique aqui para assistir o vídeo" class="img-fluid" id="play-video-btn" style="cursor: pointer;">
+            </div>
+    
+            <h1 class="display-4 mt-5">Se torne especialista em Nail Art em 2025</h1>
             <p class="lead">
                 Conquiste sua liberdade financeira com a ajuda de Mariana Nails, que já atendeu centenas de clientes e desenvolveu um método de design que eleva sua habilidade em fazer Nail Art e Alongamento de unhas.
             </p>
             <a href="https://pay.kiwify.com.br/lf9IZHj" class="btn btn-primary btn-lg">COMPRAR APOSTILA</a>
         
             <h2 class="mb-4">Veja um pouco do que você vai aprender</h2>
-            
-            <!-- Vídeo sem player no mobile -->
-            <div class="ratio ratio-16x9">
-                <video autoplay muted loop class="w-100 video-embed" >
-                    <source src="galeria/unhas_nail_art_curso_completo_mariana_nails_barueri_alphaville.webm" type="video/webm">
-                    Seu navegador não suporta o formato de vídeo.
-                </video>
-            </div>
         </div>
     </header>
+    
+    <script src="script.js"></script>
+    </body>
+    </html>
+    
     
     
     <!-- Sobre Section -->
