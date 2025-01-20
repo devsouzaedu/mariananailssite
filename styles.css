@@ -5,17 +5,34 @@ body {
     line-height: 1.6;
 }
 
+/* Navbar e Logo */
+/* Botão de Login */
+.navbar-nav .btn {
+    color: #333;
+    background-color: #ffffff; /* Branco */
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
 
+.navbar-nav .btn i {
+    margin-right: 5px; /* Espaço entre o ícone e o texto */
+}
 
-
-
-
+/* Hover do botão */
+.navbar-nav .btn:hover {
+    background-color: #d5006d; /* Roxo */
+    border-color: #d5006d; /* Roxo */
+    color: #ffffff; /* Texto branco */
+}
 
 /* Hero Section */
-/* Hero + Video Section */
 .hero-video-section {
-    background-color: #ff69b4; /* Fundo rosa */
-    color: #fff; /* Texto branco */
+    background-color: #d5006d; /* Roxo */
+    color: #ffffff; /* Texto branco */
     padding: 50px 0; /* Espaçamento superior e inferior */
 }
 
@@ -36,14 +53,13 @@ body {
 }
 
 .hero-video-section .btn {
-    background-color: #e83e8c; /* Rosa escuro */
-    border-color: #e83e8c; /* Borda rosa escuro */
-    color: #fff; /* Texto branco */
+    background-color: #004e92; /* Azul escuro */
+    border-color: #004e92; /* Azul escuro */
+    color: #ffffff; /* Texto branco */
     padding: 10px 30px; /* Espaçamento interno */
     font-size: 1.2rem; /* Tamanho do texto do botão */
     border-radius: 5px; /* Cantos arredondados */
     text-transform: uppercase; /* Texto em maiúsculas */
-    
 }
 
 .hero-video-section .btn:hover {
@@ -52,7 +68,7 @@ body {
 }
 
 #galeria {
-    background-color: #f8f9fa;
+    background-color: #f5f5f5; /* Beige */
 }
 
 .gallery-item {
@@ -81,9 +97,6 @@ body {
     border: none;
 }
 
-
-
-
 /* Sobre Section */
 #sobre img {
     border: 5px solid #ffc107;
@@ -91,16 +104,16 @@ body {
 }
 
 #sobre h2 {
-    color: #e83e8c;
+    color: #d5006d; /* Roxo */
 }
 
 /* Conteúdo Section */
 #conteudo {
-    background-color: #f8f9fa;
+    background-color: #f5f5f5; /* Beige */
 }
 
 #conteudo h2 {
-    color: #e83e8c;
+    color: #d5006d; /* Roxo */
 }
 
 #conteudo ul li {
@@ -109,12 +122,12 @@ body {
 
 /* Depoimentos */
 #depoimentos h2 {
-    color: #ffc107;
+    color: #004e92; /* Azul escuro */
 }
 
 #depoimentos .testimonial {
-    background-color: #e83e8c;
-    color: #fff;
+    background-color: #d5006d; /* Roxo */
+    color: #ffffff; /* Texto branco */
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -123,27 +136,27 @@ body {
 #depoimentos .testimonial strong {
     display: block;
     margin-top: 10px;
-    color: #ffc107;
+    color: #ffc107; /* Amarelo */
 }
 
 /* Inscrição Section */
 #inscricao {
-    background-color: #111;
-    color: #f8f9fa;
+    background-color: #111; /* Preto */
+    color: #f8f9fa; /* Texto claro */
 }
 
 #inscricao h2 {
-    color: #ffc107;
+    color: #ffc107; /* Amarelo */
 }
 
 #inscricao .btn {
-    background-color: #e83e8c;
-    border-color: #e83e8c;
+    background-color: #d5006d; /* Roxo */
+    border-color: #d5006d; /* Roxo */
 }
 
 #inscricao .btn:hover {
-    background-color: #c82362;
-    border-color: #c82362;
+    background-color: #c82362; /* Cor ao passar o mouse */
+    border-color: #c82362; /* Borda ao passar o mouse */
 }
 
 /* Contato Section */
@@ -152,7 +165,7 @@ body {
 }
 
 #contato h2 {
-    color: #e83e8c;
+    color: #d5006d; /* Roxo */
 }
 
 #contato .form-label {
@@ -160,18 +173,27 @@ body {
 }
 
 #contato .btn {
-    background-color: #e83e8c;
-    border-color: #e83e8c;
-    color: #fff;
+    background-color: #d5006d; /* Roxo */
+    border-color: #d5006d; /* Roxo */
+    color: #fff; /* Texto branco */
 }
 
 #contato .btn:hover {
-    background-color: #c82362;
-    border-color: #c82362;
+    background-color: #c82362; /* Cor ao passar o mouse */
+    border-color: #c82362; /* Borda ao passar o mouse */
 }
-
 
 #sobre .col-md-6 img {
     border: none; /* Remove qualquer borda */
     border-radius: 0; /* Remove borda arredondada */
+}
+
+
+/* Estilos específicos para o vídeo no mobile */
+@media (max-width: 768px) {
+    .video-embed {
+        object-fit: cover; /* Garante que o vídeo cubra toda a área */
+        height: 100vh; /* Faz o vídeo ocupar a altura total da tela */
+        width: 100%; /* Faz o vídeo ocupar toda a largura */
+    }
 }
