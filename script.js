@@ -26,9 +26,10 @@ galleryItems.forEach(item => {
 // Função para mostrar o vídeo quando a imagem for clicada
 document.getElementById("play-video-btn").addEventListener("click", function() {
     // Oculta a imagem e mostra o vídeo
-    document.getElementById("video-container").style.display = "block";
-    // Inicia a reprodução do vídeo
-    document.getElementById("video").play();
+    const videoContainer = document.getElementById("video-container");
+    const video = document.getElementById("video");
+    videoContainer.style.display = "block";
+    video.play();
     // Oculta a imagem
-    document.getElementById("play-video-btn").style.display = "none";
+    this.style.display = "none";
 });
