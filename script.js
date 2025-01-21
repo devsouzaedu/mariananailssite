@@ -12,24 +12,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 // Abrir a imagem no modal
-const galleryItems = document.querySelectorAll('.gallery-item');
-const modalImage = document.getElementById('modalImage');
-
-galleryItems.forEach(item => {
-    item.addEventListener('click', function() {
-        const imageSrc = this.getAttribute('data-bs-img');
-        modalImage.setAttribute('src', imageSrc);
-    });
-});
-
-
-// Função para mostrar o vídeo quando a imagem for clicada
 document.getElementById("play-video-btn").addEventListener("click", function() {
-    // Oculta a imagem e mostra o vídeo
     const videoContainer = document.getElementById("video-container");
     const video = document.getElementById("video");
+
+    // Garante que o vídeo seja exibido no mesmo tamanho
     videoContainer.style.display = "block";
+    videoContainer.style.width = "100%";
+    videoContainer.style.maxWidth = "600px"; // Ajusta para o valor máximo do CSS
+    videoContainer.style.margin = "0 auto";
+
     video.play();
-    // Oculta a imagem
-    this.style.display = "none";
+    this.style.display = "none"; // Oculta a imagem
 });
+

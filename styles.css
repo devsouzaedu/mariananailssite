@@ -199,3 +199,15 @@ body {
         width: 100%; /* Faz o vídeo ocupar toda a largura */
     }
 }
+
+#video-container {
+    width: 100%; /* Garante que o vídeo se ajuste ao tamanho do container */
+    max-width: 600px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza o vídeo */
+}
+
+.video-embed {
+    object-fit: cover;
+    height: auto; /* Ajusta automaticamente a altura conforme a largura */
+    width: 100%; /* Faz o vídeo ocupar toda a largura do container */
+}
