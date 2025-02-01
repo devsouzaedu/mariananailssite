@@ -1,213 +1,220 @@
-/* Estilos Gerais */
-body {
+/* Global */
+* {
+    box-sizing: border-box;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
-    color: #333;
-    line-height: 1.6;
-}
-
-
-
-/* Navbar e Logo */
-/* Botão de Login */
-.navbar-nav .btn {
-    color: #333;
-    background-color: #ffffff; /* Branco */
-    border: 1px solid #ddd;
-    padding: 8px 15px;
-    text-transform: uppercase;
-    font-size: 14px;
+    scroll-behavior: smooth;
+  }
+  .section {
+    padding: 80px 0;
+  }
+  .section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #d5006d;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: rgba(0,0,0,0.8);
+    padding: 15px 0;
+    transition: background-color 0.3s;
+  }
+  .navbar.fixed-top {
+    background-color: #d5006d;
+  }
+  .navbar-brand .logo {
+    height: 30px;
+  }
+  .navbar-nav .nav-link {
+    margin: 0 10px;
+    font-weight: 500;
+    color: #fff !important;
+  }
+  .btn-login {
+    background-color: transparent; /* Remove o fundo branco */
+    color: #d5006d !important;      /* Define a cor pink para o texto */
+    border: none;                   /* Remove bordas, se houver */
+    padding: 5px 15px;              /* Espaçamento interno, se necessário */
+    margin-left: 10px;
+  }
+  .btn-login:hover {
+    background-color: #f8f9fa;
+  }
+  
+  /* Hero Section */
+  #hero {
+    position: relative;
+    height: 100vh;
+    background: url('images/hero_background.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
-}
-
-.navbar-nav .btn i {
-    margin-right: 5px; /* Espaço entre o ícone e o texto */
-}
-
-/* Hover do botão */
-.navbar-nav .btn:hover {
-    background-color: #d5006d; /* Roxo */
-    border-color: #d5006d; /* Roxo */
-    color: #ffffff; /* Texto branco */
-}
-
-/* Hero Section */
-.hero-video-section {
-    background-color: #d5006d; /* Roxo */
-    color: #ffffff; /* Texto branco */
-    padding: 50px 0; /* Espaçamento superior e inferior */
-}
-
-.hero-video-section h1 {
-    font-size: 2.5rem; /* Tamanho do título */
-    font-weight: bold; /* Negrito */
-    margin-bottom: 20px; /* Espaçamento inferior */
-}
-
-.hero-video-section p {
-    font-size: 1.2rem; /* Tamanho do texto */
-    margin-bottom: 30px; /* Espaçamento inferior */
-}
-
-.hero-video-section h2 {
-    font-size: 1.8rem; /* Tamanho do título do vídeo */
-    margin-bottom: 20px; /* Espaçamento inferior */
-}
-
-.hero-video-section .btn {
-    background-color: #004e92; /* Azul escuro */
-    border-color: #004e92; /* Azul escuro */
-    color: #ffffff; /* Texto branco */
-    padding: 10px 30px; /* Espaçamento interno */
-    font-size: 1.2rem; /* Tamanho do texto do botão */
-    border-radius: 5px; /* Cantos arredondados */
-    text-transform: uppercase; /* Texto em maiúsculas */
-}
-
-.hero-video-section .btn:hover {
-    background-color: #c82362; /* Cor ao passar o mouse */
-    border-color: #c82362; /* Borda ao passar o mouse */
-}
-
-#galeria {
-    background-color: #f5f5f5; /* Beige */
-}
-
-.gallery-item {
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.gallery-item:hover {
-    transform: scale(1.05);
-}
-
-#imagemModal .modal-body {
-    max-height: 60vh;
-    overflow-y: auto;
-}
-
-#imagemModal img {
-    max-width: 100%;
-    height: auto;
-    border: none;
-}
-
-#carouselExampleAutoplaying .carousel-item img {
-    object-fit: cover;
-    height: 400px; /* Ajuste a altura conforme necessário */
-    border: none;
-}
-
-/* Sobre Section */
-#sobre img {
-    border: 5px solid #ffc107;
-    border-radius: 10px;
-}
-
-#sobre h2 {
-    color: #d5006d; /* Roxo */
-}
-
-/* Conteúdo Section */
-#conteudo {
-    background-color: #f5f5f5; /* Beige */
-}
-
-#conteudo h2 {
-    color: #d5006d; /* Roxo */
-}
-
-#conteudo ul li {
-    margin-bottom: 5px;
-}
-
-/* Depoimentos */
-#depoimentos h2 {
-    color: #004e92; /* Azul escuro */
-}
-
-#depoimentos .testimonial {
-    background-color: #d5006d; /* Roxo */
-    color: #ffffff; /* Texto branco */
-    padding: 20px;
-    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+  }
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(213, 0, 109, 0.7);
+    z-index: 1;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+  #hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
     margin-bottom: 20px;
-}
-
-#depoimentos .testimonial strong {
-    display: block;
-    margin-top: 10px;
-    color: #ffc107; /* Amarelo */
-}
-
-/* Inscrição Section */
-#inscricao {
-    background-color: #111; /* Preto */
-    color: #f8f9fa; /* Texto claro */
-}
-
-#inscricao h2 {
-    color: #ffc107; /* Amarelo */
-}
-
-#inscricao .btn {
-    background-color: #d5006d; /* Roxo */
-    border-color: #d5006d; /* Roxo */
-}
-
-#inscricao .btn:hover {
-    background-color: #c82362; /* Cor ao passar o mouse */
-    border-color: #c82362; /* Borda ao passar o mouse */
-}
-
-/* Contato Section */
-#contato {
-    padding: 50px 0;
-}
-
-#contato h2 {
-    color: #d5006d; /* Roxo */
-}
-
-#contato .form-label {
-    color: #333;
-}
-
-#contato .btn {
-    background-color: #d5006d; /* Roxo */
-    border-color: #d5006d; /* Roxo */
-    color: #fff; /* Texto branco */
-}
-
-#contato .btn:hover {
-    background-color: #c82362; /* Cor ao passar o mouse */
-    border-color: #c82362; /* Borda ao passar o mouse */
-}
-
-#sobre .col-md-6 img {
-    border: none; /* Remove qualquer borda */
-    border-radius: 0; /* Remove borda arredondada */
-}
-
-
-/* Estilos específicos para o vídeo no mobile */
-@media (max-width: 768px) {
-    .video-embed {
-        object-fit: cover; /* Garante que o vídeo cubra toda a área */
-        height: 100vh; /* Faz o vídeo ocupar a altura total da tela */
-        width: 100%; /* Faz o vídeo ocupar toda a largura */
-    }
-}
-
-#video-container {
-    width: 100%; /* Garante que o vídeo se ajuste ao tamanho do container */
-    max-width: 600px; /* Limita a largura máxima */
-    margin: 0 auto; /* Centraliza o vídeo */
-}
-
-.video-embed {
+  }
+  #hero p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+  }
+  .cta-buttons a {
+    margin: 0 10px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+  }
+  .cta-buttons a:hover {
+    transform: translateY(-3px);
+  }
+  .btn-primary {
+    background-color: #d5006d;
+    border: none;
+  }
+  .btn-secondary {
+    background-color: #004e92;
+    border: none;
+  }
+  
+  /* Video Trigger */
+  .video-trigger {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  .video-trigger img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+  }
+  .video-trigger:hover img {
+    transform: scale(1.03);
+  }
+  .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: #fff;
+    opacity: 0.8;
+  }
+  
+  /* Course Cards */
+  .course-card {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    margin-bottom: 30px;
+  }
+  .course-card:hover {
+    transform: translateY(-5px);
+  }
+  .course-img {
+    width: 100%;
+    height: 250px;
     object-fit: cover;
-    height: auto; /* Ajusta automaticamente a altura conforme a largura */
-    width: 100%; /* Faz o vídeo ocupar toda a largura do container */
-}
+  }
+  .course-info {
+    padding: 20px;
+  }
+  .course-info h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    color: #d5006d;
+    margin-bottom: 15px;
+  }
+  .course-info p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Testimonials */
+  .testimonial-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    margin: 15px;
+    color: #333;
+    text-align: center;
+  }
+  .testimonial-card p {
+    font-style: italic;
+    margin-bottom: 15px;
+  }
+  .testimonial-card h5 {
+    font-weight: 700;
+    color: #d5006d;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #111;
+    color: #ccc;
+    padding: 30px 0;
+  }
+  .footer p {
+    margin: 5px 0;
+  }
+  .footer a {
+    color: #fff;
+    transition: color 0.3s;
+  }
+  .footer a:hover {
+    color: #d5006d;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    #hero h1 {
+      font-size: 2.5rem;
+    }
+    #hero p {
+      font-size: 1.2rem;
+    }
+    .cta-buttons a {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+  }
+  
+
+  @media (min-width: 992px) {
+    /* Altera o alinhamento do container no desktop */
+    #hero {
+      /* Faz o conteúdo alinhar ao início (topo) */
+      align-items: flex-start !important;
+      /* Adiciona um padding superior para "empurrar" o conteúdo para baixo */
+      padding-top: 100px; /* ajuste este valor conforme necessário */
+    }
+  }
+  
+  
